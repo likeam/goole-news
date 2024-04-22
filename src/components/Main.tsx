@@ -40,10 +40,11 @@ var req = new Request(url);
    
       <Navbar />
       <Menubar />
-      <div className="pt-5 bg-gray-100 ">
-        <h1 className="text-3xl ml-28">Your briefing</h1>
-        <h1 className="mt-2 text-sm text-gray-500 ml-28">{moment(date).format("DD-MM-YY")}</h1>
-      <Home news={news}/>
+      <div className="w-screen pt-5 bg-gray-100 ">
+        <h1 className="pl-16 text-3xl ml-28">Your briefing</h1>
+        <h1 className="pl-16 mt-2 text-sm text-gray-500 ml-28">{moment(date).format("DD-MM-YY")}</h1>
+        <hr className="mt-5 "/>
+        <Home news={news}/>
       </div>
       
     </>
