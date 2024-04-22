@@ -1,6 +1,6 @@
 function Menubar() {
   return (
-    <div className="flex items-center justify-center w-screen p-2 mt-6 shadow-sm ">
+    <div className="flex items-center justify-center w-screen p-2 mt-6 bg-white shadow-sm ">
       <h1 className="text-base font-medium text-gray-500 cursor-pointer ml-7 hover:text-black">
         Home
       </h1>

@@ -13,7 +13,7 @@ function Navbar() {
   };
 
   return (
-    <div className="flex items-center w-screen m-2 justify-evenly">
+    <div className="flex items-center w-screen m-2 bg-white justify-evenly">
       <div>
         <img src={goolge} className="w-40 h-10 " />
       </div>
@@ -22,12 +22,12 @@ function Navbar() {
         <input
           type="text"
           placeholder="Search for news"
-          className="ml-4  bg-zinc-100"
+          className="ml-4 bg-zinc-100"
         />
       </div>
       <button
         onClick={googleSingin}
-        className="p-2 text-white bg-blue-600 rounded-md  w-28"
+        className="p-2 text-white bg-blue-600 rounded-md w-28"
       >
         Sign In
       </button>
