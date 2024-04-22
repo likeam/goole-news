@@ -11,12 +11,9 @@ function Main() {
 
   const getNews = async () => {
 
-    var url = 'https://newsapi.org/v2/everything?' +
-          'q=Apple&' +
-          'from=2024-04-19&' +
-          'sortBy=popularity&' +
-          'apiKey=35839542f8864448a68e188adb9a8467';
-
+    var url = 'https://newsapi.org/v2/top-headlines?' +
+    'country=us&' +
+    'apiKey=35839542f8864448a68e188adb9a8467';
 var req = new Request(url);
 
     try {
@@ -43,9 +40,9 @@ var req = new Request(url);
    
       <Navbar />
       <Menubar />
-      <div className=" bg-gray-100 pt-5">
-        <h1 className=" ml-28 text-3xl">Your briefing</h1>
-        <h1 className=" ml-28 text-gray-500 text-sm mt-2">{moment(date).format("DD-MM-YY")}</h1>
+      <div className="pt-5 bg-gray-100 ">
+        <h1 className="text-3xl ml-28">Your briefing</h1>
+        <h1 className="mt-2 text-sm text-gray-500 ml-28">{moment(date).format("DD-MM-YY")}</h1>
       <Home news={news}/>
       </div>
       
