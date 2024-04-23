@@ -7,16 +7,13 @@ import News from "./News";
 
 function Main() {
   const [news, setNews] = useState([]);
+  const [search, setSearch] = useState(" ");
+  const [menu, setMenu] = useState("Pakistan");
 
   const getNews = async () => {
-    var url =
-      "https://newsapi.org/v2/top-headlines?" +
-      "country=us&" +
-      "apiKey=35839542f8864448a68e188adb9a8467";
-    var req = new Request(url);
-
+   
     try {
-      await fetch(req)
+      await fetch(`https://newsapi.org/v2/everything?q=${menu ? menu : "politics"}&sortBy=popularity&apiKey=35839542f8864448a68e188adb9a8467`)
         .then((res) => res.json())
         .then((json) => setNews(json.articles));
     } catch (er) {
@@ -24,18 +21,17 @@ function Main() {
     }
   };
 
-  console.log(news[1]?.url);
 
   useEffect(() => {
     getNews();
-  }, []);
+  }, [menu]);
 
   const date: any = new Date();
 
   return (
     <div className="bg-gray-200 ">
-      <Navbar />
-      <Menubar />
+      <Navbar setSearch = {setSearch} />
+      <Menubar setMenu = {setMenu} />
       <div className="w-screen pt-5 bg-gray-100 ">
         <h1 className="pl-16 text-3xl ml-28">Your briefing</h1>
         <h1 className="pl-16 mt-2 text-sm text-gray-500 ml-28">
@@ -44,7 +40,7 @@ function Main() {
         <hr className="mt-5 " />
         <Home news={news} />
       </div>
-      <News news={news} />
+      <News news={news} search = {search} />
     </div>
   );
 }
