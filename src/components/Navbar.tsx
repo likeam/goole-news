@@ -37,7 +37,7 @@ function Navbar(props: searchProps) {
           className="ml-4 bg-zinc-100"
         />
       </div>
-      {auth?.currentUser ? <img src={auth?.currentUser?.photoURL ? auth?.currentUser?.photoURL : account } onClick={() =>setProfile(true)} className="rounded-full w-9 h-9 ml-60" /> : <button
+      {auth?.currentUser ? <img src={auth?.currentUser?.photoURL ? auth?.currentUser?.photoURL : account } onClick={() =>setProfile(true)} className="rounded-full cursor-pointer w-9 h-9 ml-60" /> : <button
         onClick={googleSingin}
         className="p-2 text-white bg-blue-600 rounded-md w-28"
       >
