@@ -4,7 +4,7 @@ type newProp = {
 
 function Home(props: newProp) {
   return (
-    <div className="flex w-screen pl-32 pr-32 bg-gray-400">
+    <div className="flex w-screen pl-32 pr-32 bg-gray-100">
       <div className="grid w-8/12 grid-cols-2 p-5 bg-white rounded-md">
         <a href={props?.news[1]?.url}>
           <div className=" w-72">

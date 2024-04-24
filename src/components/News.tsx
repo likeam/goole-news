@@ -10,7 +10,7 @@ const News = (props: newProps) => {
         {props?.news?.filter((data:any) => data?.title?.includes(props?.search)).map((data: any) => {
           return (
             <a href={data.url}>
-              <div className="flex items-center ml-5 border border-spacing-1">
+              <div className="flex items-center ml-5 border rounded-md border-spacing-1">
                 <div className="mt-3 ">
                   <h1 className="font-extrabold ">{data.source?.name}</h1>
                   <h1 className=" hover:underline">{data.title}</h1>

@@ -18,9 +18,7 @@ function Menubar(props:setMenuProps) {
       <h1  className="text-base font-medium text-gray-200 cursor-pointer ml-7 hover:text-black">
         |
       </h1>
-      <h1 onClick={() => props?.setMenu("NewsShowcase")} className="text-base font-medium text-gray-500 cursor-pointer ml-7 hover:text-black">
-        NewsShowcase
-      </h1>
+      
       <h1 onClick={() => props?.setMenu("Pakistan")} className="text-base font-medium text-gray-500 cursor-pointer ml-7 hover:text-black">
         Pakistan
       </h1>
