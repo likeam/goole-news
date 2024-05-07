@@ -34,7 +34,7 @@ function Navbar(props: searchProps) {
           onChange={(e) => props?.setSearch(e.target.value)}
           type="text"
           placeholder="Search for news"
-          className="ml-4 bg-zinc-100"
+          className="ml-4 outline-none bg-zinc-100"
         />
       </div>
       {auth?.currentUser ? <img src={auth?.currentUser?.photoURL ? auth?.currentUser?.photoURL : account } onClick={() =>setProfile(true)} className="rounded-full cursor-pointer w-9 h-9 ml-60" /> : <button
