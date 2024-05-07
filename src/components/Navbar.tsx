@@ -6,6 +6,7 @@ import account from "../assets/profile.png";
 import { useState } from "react";
 import Profile from "./Profile";
 
+
 type searchProps = {
   setSearch: any;
 };
